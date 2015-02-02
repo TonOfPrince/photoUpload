@@ -1,0 +1,15 @@
+<div class="error" ng-show="wrongType">
+  <span >Wrong file type! Can only upload PNG or JPG files.</span>
+</div>
+<div class="error" ng-show="tooBig">
+  <span >The file is too big! File must be under 1MB.</span>
+</div>
+<div class="center">
+<span>User ID: {{id}}</span>
+
+<form method="post" enctype="multipart/form-data" id="uploadForm" action="/display">
+    <input type="file" name="userPhoto" ng-model="picFile">
+    <input type="submit" value="Upload" name="submit">
+  </form>
+</div>
+
